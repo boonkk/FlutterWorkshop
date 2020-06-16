@@ -1,0 +1,34 @@
+{
+	"page1": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "Access modifiers",
+			"description" : "Although creating classes is practically the same in Java and Dart however access modifiers are a bit different. In Dart default access modifier is public if we want field or method to be private we should add \"_\" at start of the field/method name."
+		},
+	"page2": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "Constructor",
+			"description" : "In Dart it’s possible to initialize class fields in constructor by using following syntax."
+		},
+
+	"page3": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "Parameters",	
+			"description" : "Dart support two types of method parameters: positional (like in Java) and named. If method has named arguments they have to be called by name."
+		},
+	"page4": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "Creating objects",	
+			"description" : "You don’t have to use keyword “new” for creating instances of classes."
+		},
+	"page5": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "One line methods, getters and setters",	
+			"description" : "If a method has only one line, and no parameters it can be simplified to a one-liner using “=>”. Look at this getter."
+		},
+	"page6": {
+			"imageFile" : "assets/dartSimpleClass.png",
+			"title" : "Constants",	
+			"description" : "There are two keywords for creating constants in Dart: const and final. The difference is that the first must have value assigned during compile time, and the second can be assigned during runtime (only once)."
+		}
+
+}
