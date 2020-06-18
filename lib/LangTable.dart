@@ -1,15 +1,17 @@
+import 'package:FlutterWorkshop/Language.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'JsonPageReader.dart';
 
 class LangTable extends StatelessWidget {
-  String _language;
+
+  String _title;
   String _imageFileName;
   String _description;
 
 
-  LangTable(this._language, this._imageFileName, this._description);
+  LangTable(this._title, this._imageFileName, this._description);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,8 @@ class LangTable extends StatelessWidget {
     return Column(
           children: <Widget>[
             Container(
-              child: Text(_language,
+              child: Text(
+                _title,
                 style: TextStyle(
                     color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,

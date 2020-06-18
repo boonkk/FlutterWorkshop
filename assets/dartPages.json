@@ -1,34 +1,28 @@
 {
 	"page1": {
-			"imageFile" : "assets/dartSimpleClass.png",
+			"imageFile" : "assets/page1dart.png",
 			"title" : "Access modifiers",
 			"description" : "Although creating classes is practically the same in Java and Dart however access modifiers are a bit different. In Dart default access modifier is public if we want field or method to be private we should add \"_\" at start of the field/method name."
 		},
 	"page2": {
-			"imageFile" : "assets/dartSimpleClass.png",
+			"imageFile" : "assets/page2dart.png",
 			"title" : "Constructor",
-			"description" : "In Dart it’s possible to initialize class fields in constructor by using following syntax."
+			"description" : "In Dart it’s possible to initialize class fields in constructor by using following syntax. Dart support two types of constructor parameters: positional (like in Java) and named (surrounded with \"{}\"). If constructor has named arguments they have to be called by name."
 		},
-
 	"page3": {
-			"imageFile" : "assets/dartSimpleClass.png",
-			"title" : "Parameters",	
-			"description" : "Dart support two types of method parameters: positional (like in Java) and named. If method has named arguments they have to be called by name."
+			"imageFile" : "assets/page3dart.png",
+			"title" : "Creating objects",	
+			"description" : "As you could seen in previous screen, you don’t have to use keyword “new” for creating instances of classes. You call constructor like if it was a method (btw - it is). The greater fun is, that you can give your constructors names!"
 		},
 	"page4": {
-			"imageFile" : "assets/dartSimpleClass.png",
-			"title" : "Creating objects",	
-			"description" : "You don’t have to use keyword “new” for creating instances of classes."
+			"imageFile" : "assets/page4dart.png",
+			"title" : "One line methods, getters and setters",	
+			"description" : "If a method has only one line, it can be simplified to a one-liner using “=>”. Look at this getter or countFruits methods."
 		},
 	"page5": {
-			"imageFile" : "assets/dartSimpleClass.png",
-			"title" : "One line methods, getters and setters",	
-			"description" : "If a method has only one line, and no parameters it can be simplified to a one-liner using “=>”. Look at this getter."
-		},
-	"page6": {
-			"imageFile" : "assets/dartSimpleClass.png",
+			"imageFile" : "assets/page5dart.png",
 			"title" : "Constants",	
-			"description" : "There are two keywords for creating constants in Dart: const and final. The difference is that the first must have value assigned during compile time, and the second can be assigned during runtime (only once)."
+			"description" : "There are two keywords for creating constants in Dart: const and final. The difference is that the first must have value assigned during compile time (must be static), and the second can be assigned during runtime (only once). Variable \"five\" is initialized immediately, and variable \"four\" must be initialized in constructor."
 		}
 
 }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:FlutterWorkshop/Language.dart';
 import 'package:flutter/services.dart';
 
 class JsonPageReader {
@@ -11,13 +12,18 @@ class JsonPageReader {
     return await rootBundle.loadString(path);
   }
 
-  Future<Map> _readData() async {
-    String data = await _getFileData("assets/dartPages.json");
+  Future<Map> _readData(Language language) async {
+    String data;
+    if(language == Language.Dart)
+      data = await _getFileData("assets/dartPages.json");
+    else
+      data = await _getFileData("assets/javaPages.json");
+
     return json.decode(data);
   }
 
-  Future<Map> getPageData(int page) async {
-    map = await _readData();
+  Future<Map> getPageData(Language language, int page) async {
+    map = await _readData(language);
     print("Page to read $page");
     _numberOfPages = map.length;
     return map["page$page"];
