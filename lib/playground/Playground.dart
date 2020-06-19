@@ -2,6 +2,8 @@ import 'package:FlutterWorkshop/playground/ContainerPresentation.dart';
 import 'package:FlutterWorkshop/playground/GridViewObject.dart';
 import 'package:FlutterWorkshop/playground/GridViewPresentation.dart';
 import 'package:FlutterWorkshop/playground/SwipeElement.dart';
+import 'package:FlutterWorkshop/playground/WrapObject.dart';
+import 'package:FlutterWorkshop/playground/WrapPresentation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -9,6 +11,7 @@ class Playground extends StatelessWidget {
   List<Widget> widgets = [
     ContainerPresentation(),
     GridViewPresentation(),
+    WrapPresentation()
   ];
 
   @override

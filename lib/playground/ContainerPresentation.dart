@@ -9,7 +9,7 @@ class ContainerPresentation extends StatefulWidget {
 
   @override
   String toStringShort() {
-    return "Container widget";
+    return "Container";
   }
 }
 
@@ -43,89 +43,109 @@ class _ContainerPresentationState extends State<ContainerPresentation> {
     return Scaffold(
         backgroundColor: Colors.indigo,
         appBar: AppBar(
-            title: Text(
-          "Container widget",
-          style: TextStyle(color: Colors.white, fontSize: 25),
-        )),
+            backgroundColor: Colors.indigoAccent,
+            title: Text("Container widget")),
         body: OrientationBuilder(
           builder: (context, orientation) {
-            //todo change to safe fill screen without scrolling:
-            //todo without gridview it fails on landscape orientation
-            //todo with gridview it's scrollable
-            return GridView.count(
-              crossAxisCount: orientation == Orientation.portrait ? 1 : 2,
-              children: <Widget>[
-                Container(
-                  height: 260,
-                  width: double.infinity,
-                  child: ContainerObject(
-                      _childSize, _margin, _padding, _alignment),
-                ),
-                Container(
-                    child: Column(
-                  children: <Widget>[
-                    Text("Child Size: $_childSize",
-                        style: TextStyle(color: Colors.white)),
-                    Slider(
-                      min: 0,
-                      max: 300,
-                      value: _childSize,
-                      onChanged: (value) {
-                        setState(() {
-                          _childSize = value.roundToDouble();
-                        });
-                      },
-                    ),
-                    Text("margin parameter: $_margin",
-                        style: TextStyle(color: Colors.white)),
-                    Slider(
-                      min: 0,
-                      max: 200,
-                      value: _margin,
-                      onChanged: (value) {
-                        setState(() {
-                          _margin = value.roundToDouble();
-                        });
-                      },
-                    ),
-                    Text("padding parameter: $_padding",
-                        style: TextStyle(color: Colors.white)),
-                    Slider(
-                      min: 0,
-                      max: 200,
-                      value: _padding,
-                      onChanged: (value) {
-                        setState(() {
-                          _padding = value.roundToDouble();
-                        });
-                      },
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Text("alignment parameter",
-                            style: TextStyle(color: Colors.white)),
-                        RaisedButton(
-                            child: Text(
-                              _alignment.toString(),
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            color: Colors.indigoAccent,
-                            onPressed: () {
-                              setState(
-                                () {
-                                  alIndexIncrement();
-                                  _alignment = _alignments[alIndex];
-                                },
-                              );
-                            })
-                      ],
-                    ),
-                  ],
-                )),
-              ],
-            );
+            if (orientation == Orientation.portrait) {
+              return Column(children: <Widget>[
+                Expanded(child: getPlayWidget()),
+                Container(child: getControlWidget(),
+                margin: EdgeInsets.all(20),)
+              ]);
+            } else
+              return Row(
+                children: <Widget>[
+                  Expanded(child: getPlayWidget()),
+                  Expanded(
+                      child: Container(
+                    margin: EdgeInsets.all(20),
+                    child: getControlWidget(),
+                  )),
+                ],
+              );
           },
         ));
+  }
+
+  Widget getPlayWidget() {
+    return Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: ContainerObject(_childSize, _margin, _padding, _alignment),
+    );
+  }
+
+  Widget getControlWidget() {
+    return Table(
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      columnWidths: {
+        0: FlexColumnWidth(2),
+        1: FlexColumnWidth(3)
+      },
+      children: <TableRow>[
+        TableRow(
+          children: <Widget>[
+            Text("child size: $_childSize"),
+            Slider(
+              min: 0,
+              max: 300,
+              value: _childSize,
+              onChanged: (value) {
+                setState(() {
+                  _childSize = value.roundToDouble();
+                });
+              },
+            ),
+          ],
+        ),
+        TableRow(
+          children: <Widget>[
+            Text("margin: $_margin"),
+            Slider(
+              min: 0,
+              max: 150,
+              value: _margin,
+              onChanged: (value) {
+                setState(() {
+                  _margin = value.roundToDouble();
+                });
+              },
+            ),
+          ],
+        ),
+        TableRow(
+          children: <Widget>[
+            Text("padding: $_padding"),
+            Slider(
+              min: 0,
+              max: 140,
+              value: _padding,
+              onChanged: (value) {
+                setState(() {
+                  _padding = value.roundToDouble();
+                });
+              },
+            ),
+          ],
+        ),
+        TableRow(
+          children: <Widget>[
+            Text("alignment   "),
+            RaisedButton(
+                child: Text(_alignment.toString(),),
+                color: Colors.indigoAccent,
+                onPressed: () {
+                  setState(
+                    () {
+                      alIndexIncrement();
+                      _alignment = _alignments[alIndex];
+                    },
+                  );
+                })
+          ],
+        ),
+      ],
+    );
   }
 }

@@ -6,15 +6,15 @@ class SwipeElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      foregroundDecoration: ShapeDecoration(shape: CircleBorder()),
-      color: Colors.indigoAccent,
-      child: Column(
-        children: <Widget>[
-          Text(_value,style: TextStyle(fontSize: 30),),
-          Text(_value,style: TextStyle(fontSize: 40),)
-        ],
+    return ClipRRect(
+      child: Container(
+        width: double.infinity,
+        color: Colors.indigoAccent,
+        child: Container(
+          alignment: Alignment.center,
+          child:
+          Text(_value,style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "Courier"),),
+        ),
       ),
     );
   }

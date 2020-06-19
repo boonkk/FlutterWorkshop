@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class GridViewObject extends StatelessWidget {
@@ -32,11 +33,15 @@ class GridViewObject extends StatelessWidget {
       crossAxisCount: _crossAxisCount.toInt(),
       mainAxisSpacing: _mainAxisSpacing,
       crossAxisSpacing: _crossAxisSpacing,
+      dragStartBehavior: DragStartBehavior.down,
+
       padding: EdgeInsets.symmetric(
           vertical: _paddingVertical, horizontal: _paddingHorizontal),
       children:
         List.generate(_numberOfObjects.toInt(), (index){
               return Container(
+                child: Text("$index", style: TextStyle(color: Colors.white),),
+                alignment: Alignment.center,
                 decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                     color: colors[getColorIndex(index)],
