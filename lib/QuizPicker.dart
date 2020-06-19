@@ -11,6 +11,7 @@ class QuizPicker extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("Pick your quiz: "),
+          backgroundColor: Colors.indigoAccent,
         ),
         body: Center(
           child: Column(

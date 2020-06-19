@@ -35,6 +35,7 @@ class _LangDifferencesState extends State<LangDifferences> {
             return Scaffold(
               appBar: AppBar(
                 title: Text(snapshot.data["title"]),
+                backgroundColor: Colors.indigoAccent,
               ),
               body: Container(
                 padding: EdgeInsets.only(bottom: 15),

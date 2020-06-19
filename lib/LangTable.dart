@@ -36,6 +36,7 @@ class LangTable extends StatelessWidget {
               child: DefaultTextStyle(
                 child: Text(_description),
                 style: TextStyle(),
+                textAlign: TextAlign.justify,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 10,),
               padding: EdgeInsets.only(bottom: 15, left: 25, right: 25),

@@ -2,12 +2,12 @@
 	"page1": {
 			"imageFile" : "assets/page1dart.png",
 			"title" : "Access modifiers",
-			"description" : "Although creating classes is practically the same in Java and Dart however access modifiers are a bit different. In Dart default access modifier is public if we want field or method to be private we should add \"_\" at start of the field/method name."
+			"description" : "Although creating classes is practically the same in Java and Dart however access modifiers are a bit different. In Dart default access modifier is public if we want properties or method to be private we should add \"_\" at start of the property/method name."
 		},
 	"page2": {
 			"imageFile" : "assets/page2dart.png",
 			"title" : "Constructor",
-			"description" : "In Dart it’s possible to initialize class fields in constructor by using following syntax. Dart support two types of constructor parameters: positional (like in Java) and named (surrounded with \"{}\"). If constructor has named arguments they have to be called by name."
+			"description" : "In Dart it’s possible to initialize class properties in constructor by using following syntax. Dart support two types of constructor parameters: positional (like in Java) and named (surrounded with \"{}\"). If constructor has named arguments they have to be called by name."
 		},
 	"page3": {
 			"imageFile" : "assets/page3dart.png",
