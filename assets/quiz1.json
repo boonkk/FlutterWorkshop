@@ -1,0 +1,63 @@
+{
+  "question1": {
+    "question": "How many threads does Dart/Flutter run on??",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "Multiple"
+    ],
+    "correct": 3
+  },
+  "question2": {
+    "question": "Best way to animate things in flutter is: ",
+    "answers": [
+      "Using stateful widget and updating setState()",
+      "AnimationBuilder widget",
+      "Flutter has no animations, external library",
+      "Use gifs"
+    ],
+    "correct": 1
+  },
+  "question3": {
+    "question": "How to make property private in Dart?",
+    "answers": [
+      "private var property;",
+      "var property",
+      "var $property",
+      "var _property"
+    ],
+    "correct": 3
+  },
+  "question4": {
+    "question": "Who created Dart?",
+    "answers": [
+      "Amazon",
+      "Google",
+      "Apple",
+      "Oracle"
+    ],
+    "correct": 1
+  },
+  "question5": {
+    "question": "Which doesn't describe an anonymous method?",
+    "answers": [
+      "() {}",
+      "(int myValue) => 0;",
+      "() {} => 0;",
+      "(int k){ return 0;}"
+
+    ],
+    "correct": 2
+  },
+  "question6": {
+    "question": "Where flutter app's can be run?",
+    "answers": [
+      "iOS and Web",
+      "Android & iOS",
+      "Android & Desktop",
+      "All of mentioned"
+    ],
+    "correct": 3
+  }
+}

@@ -71,24 +71,6 @@ class _GridViewPresentationState extends State<GridViewPresentation> {
       children: <TableRow>[
         TableRow(
           children: <Widget>[
-            Text("  cross Axis count: ", style: TextStyle(color: Colors.white)),
-            Text(getRounded(_crossAxisCount),
-                style: TextStyle(color: Colors.white)),
-            Slider(
-              min: 1,
-              max: 20,
-              divisions: 19,
-              value: _crossAxisCount,
-              onChanged: (value) {
-                setState(() {
-                  _crossAxisCount = value;
-                });
-              },
-            ),
-          ],
-        ),
-        TableRow(
-          children: <Widget>[
             Text("  number of objects: ",
                 style: TextStyle(color: Colors.white)),
             Text(getRounded(_numberOfObjects),
@@ -101,6 +83,24 @@ class _GridViewPresentationState extends State<GridViewPresentation> {
               onChanged: (value) {
                 setState(() {
                   _numberOfObjects = value;
+                });
+              },
+            ),
+          ],
+        ),
+        TableRow(
+          children: <Widget>[
+            Text("  cross Axis count: ", style: TextStyle(color: Colors.white)),
+            Text(getRounded(_crossAxisCount),
+                style: TextStyle(color: Colors.white)),
+            Slider(
+              min: 1,
+              max: 20,
+              divisions: 19,
+              value: _crossAxisCount,
+              onChanged: (value) {
+                setState(() {
+                  _crossAxisCount = value;
                 });
               },
             ),

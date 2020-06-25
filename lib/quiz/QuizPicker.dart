@@ -1,9 +1,10 @@
+
+import 'package:FlutterWorkshop/quiz/QuizWidget.dart';
 import 'package:flutter/material.dart';
 
-import 'JsonPageReader.dart';
+import '../flutterjavadiffer/JsonPageReader.dart';
 
 class QuizPicker extends StatelessWidget {
-
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,14 @@ class QuizPicker extends StatelessWidget {
             children: <Widget>[
               RaisedButton(
                 child: Text("Flutter & Dart"),
-                onPressed:null,
+                onPressed:() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => QuizWidget()),
+                    //builder: (context) => AnimationWorkshop()),
+                  );
+                },
               ),
               RaisedButton(
                 child: Text("Java or Flutter"),

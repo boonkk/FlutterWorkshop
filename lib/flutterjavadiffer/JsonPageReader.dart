@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:FlutterWorkshop/Language.dart';
+import 'package:FlutterWorkshop/flutterjavadiffer/Language.dart';
 import 'package:flutter/services.dart';
 
 class JsonPageReader {

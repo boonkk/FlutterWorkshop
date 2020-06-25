@@ -96,7 +96,7 @@ class _WrapPresentationState extends State<WrapPresentation> {
 
   Widget getControlWidget() {
     return Container(
-      margin: EdgeInsets.only(left: 15, right: 15, bottom: 15),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Column(
       children: <Widget>[
         Table(
@@ -170,9 +170,9 @@ class _WrapPresentationState extends State<WrapPresentation> {
         Table(
           children: [
             TableRow(children: [
-              Text(
-                "crossAlignment",
-              ),
+//              Text(
+//                "crossAlignment",
+//              ),
               Text(
                 "direction",
               ),
@@ -181,16 +181,16 @@ class _WrapPresentationState extends State<WrapPresentation> {
               ),
             ]),
             TableRow(children: [
-              RaisedButton(
-                child: Text(_crossAlignment.toString().split(".")[1]),
-                padding: EdgeInsets.all(2),
-                onPressed: () {
-                  setState(() {
-                    processCrossIndex();
-                    _crossAlignment = crossAlignments[crossAlignIndex];
-                  });
-                },
-              ),
+//              RaisedButton(
+//                child: Text(_crossAlignment.toString().split(".")[1]),
+//                padding: EdgeInsets.all(2),
+//                onPressed: () {
+//                  setState(() {
+//                    processCrossIndex();
+//                    _crossAlignment = crossAlignments[crossAlignIndex];
+//                  });
+//                },
+//              ),
               RaisedButton(
                 child: Text(_direction.toString().split(".")[1]),
                 onPressed: () {

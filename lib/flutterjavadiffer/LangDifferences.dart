@@ -1,7 +1,7 @@
-import 'package:FlutterWorkshop/Language.dart';
+import 'package:FlutterWorkshop/flutterjavadiffer/Language.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:FlutterWorkshop/LangTable.dart';
+import 'package:FlutterWorkshop/flutterjavadiffer/LangTable.dart';
 
 import 'JsonPageReader.dart';
 

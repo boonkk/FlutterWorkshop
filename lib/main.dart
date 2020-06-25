@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:FlutterWorkshop/Welcome.dart';
-import 'package:FlutterWorkshop/JsonPageReader.dart';
+import 'package:FlutterWorkshop/flutterjavadiffer/JsonPageReader.dart';
 
-import 'QuizPicker.dart';
+import 'quiz/QuizPicker.dart';
 
 void main() {
   runApp(MaterialApp(
