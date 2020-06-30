@@ -78,7 +78,7 @@ class _QuizWidgetState extends State<QuizWidget> with TickerProviderStateMixin {
                             ),
                           )));
                 } else if(_questionNumber > _numberOfQuestions) {
-                  return ResultPage(QuizPage.getScore());
+                  return ResultPage(QuizPage.getScore(), _numberOfQuestions);
 //                  return QuizPage(number: null,
 //                      question: null,
 //                      answers: null,

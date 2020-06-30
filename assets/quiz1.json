@@ -59,5 +59,55 @@
       "All of mentioned"
     ],
     "correct": 3
+  },
+  "question7": {
+    "question": "How is '...' operator called?",
+    "answers": [
+      "There is no '...' operator",
+      "Mapping",
+      "Spread",
+      "Varargs"
+    ],
+    "correct": 2
+  },
+  "question8": {
+    "question": "What are build modes in Flutter?",
+    "answers": [
+      "Debug, Compile, Package",
+      "Compile, Package, Run",
+      "Debug, Package, Release ",
+      "Debug, Profile, Release"
+    ],
+    "correct": 3
+  },
+  "question9": {
+    "question": "What's true about hot reload and hot restart?",
+    "answers": [
+      "hot reload: faster, hot restart: saves  state",
+      "hot restart: faster and saves  state",
+      "hot reload: faster and saves  state",
+      "hot restart: faster, hot reload: saves  state"
+    ],
+    "correct": 2
+  },
+  "question10": {
+    "question": "What is BLoC",
+    "answers": [
+      "Business Logic Controller",
+      "Business Logic Class",
+      "Business Logic Component",
+      "Business Logic Construction"
+    ],
+    "correct": 2
+  } ,
+  "question11": {
+    "question": "What is null-aware operation?",
+    "answers": [
+      "checking if value is not null before using it",
+      "replacing existing value with another different than null",
+      "assigning a value to a variable only when current is null",
+      "there is nothing like this"
+    ],
+    "correct": 2
   }
 }

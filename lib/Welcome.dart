@@ -216,13 +216,15 @@ class _WelcomeState extends State<Welcome> with TickerProviderStateMixin {
                                   fontFamily: "Courier",
                                 ),
                               ),
-                              onPressed: () {
+                              onPressed: () async {
+                                await _animationController.forward();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => LangDifferences(1)),
                                   //builder: (context) => AnimationWorkshop()),
                                 );
+                                _animationController.reverse();
                               },
                             ),
                           ),
@@ -242,12 +244,14 @@ class _WelcomeState extends State<Welcome> with TickerProviderStateMixin {
                                   fontFamily: "Courier",
                                 ),
                               ),
-                              onPressed: () {
+                              onPressed: () async {
+                                await _animationController.forward();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => QuizPicker()),
                                 );
+                                _animationController.reverse();
                               },
                             ),
                           ),
@@ -261,18 +265,12 @@ class _WelcomeState extends State<Welcome> with TickerProviderStateMixin {
                             },
                             child: RaisedButton(
                               color: Colors.indigoAccent,
-                              child: Hero(
-                                tag: "playground",
-                                child: Material(
-                                  color: Colors.transparent,
-                                  child: Text(
+                              child: Text(
                                     "Playground",
                                     style: TextStyle(
                                       fontFamily: "Courier",
                                     ),
                                   ),
-                                ),
-                              ),
                               onPressed: () async {
                                 await _animationController.forward();
                                 Navigator.push(

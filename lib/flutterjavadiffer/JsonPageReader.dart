@@ -16,8 +16,8 @@ class JsonPageReader {
     String data;
     if(language == Language.Dart)
       data = await _getFileData("assets/dartPages.json");
-    else
-      data = await _getFileData("assets/javaPages.json");
+//    else
+//      data = await _getFileData("assets/javaPages.json");
 
     return json.decode(data);
   }

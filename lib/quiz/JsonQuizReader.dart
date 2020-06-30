@@ -13,9 +13,9 @@ class JsonQuizReader {
   }
 
   Future<Map> _readData(String filename) async {
-    String data;
 
-      data = await _getFileData("assets/quiz1.json");
+      //todo pass filename in constructor or using enum - in case there are more quizzes
+      String data = await _getFileData("assets/quiz1.json");
       //data = await _getFileData("assets/$filename");
     return json.decode(data) as Map;
   }

@@ -102,7 +102,7 @@ class _QuizPageState extends State<QuizPage> {
       ],
     )
     :
-     ResultPage(_score);
+     ResultPage(_score, 1);
   }
 
   int get score => _score;

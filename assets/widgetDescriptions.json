@@ -1,0 +1,5 @@
+{
+  "Container" : "Simple widget which you can use to pack a child inside it, and then position it within the container (which can have size) with margin and padding.",
+  "Wrap" : "Wrap is a widget similar to Row and Column, but when there is no room left in row/column it wraps the children to next line. There is a bunch of parameters to adjust and reach the look you desire.",
+  "GridView" : "2D array of widgets. Big advantage that it's scrollable so you wont lose any widget. By using GridView you can obtain nice \"tile\" effect."
+}
