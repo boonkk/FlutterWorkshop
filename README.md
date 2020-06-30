@@ -3,7 +3,7 @@
 Small Flutter/Dart tutorial app with some quizzes, widgets playground, tutorial content.
 
 ## Some content from app:
-Animations stutter, sorry.
+Animations stutter on gifs, I will try to record another later.
 
 - **Logo animation:**  
 ![Logo Animation](readmecontent/animation.gif)  
